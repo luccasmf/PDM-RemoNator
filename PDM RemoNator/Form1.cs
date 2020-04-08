@@ -1,16 +1,10 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using PDM_RemoNator.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PDM_RemoNator
@@ -24,9 +18,13 @@ namespace PDM_RemoNator
         string fileLocation;
         public Form1()
         {
+            //textBox1.Text = null;
+            //lblInscritos = null;
+            //lblRemo = null;
+
             js = new JObject();
             _subscribers = new List<string>();
-           // _items = new List<dynamic>();
+            // _items = new List<dynamic>();
             InitializeComponent();
         }
 
@@ -40,10 +38,11 @@ namespace PDM_RemoNator
 
             }
             fileLocation = fileName;
+            lblRemo.Text = "Ok";
             //read txt file
         }
 
-        
+
         private void btnLoadAll_Click(object sender, EventArgs e)
         {
             ofTodos.Multiselect = false;
@@ -70,7 +69,7 @@ namespace PDM_RemoNator
 
             using (StreamReader r = new StreamReader(fileName))
             {
-                
+
                 while (!r.EndOfStream)
                 {
                     var line = r.ReadLine();
@@ -79,31 +78,37 @@ namespace PDM_RemoNator
                     _subscribers.Add(values[0]);
                 }
             }
+
+            lblInscritos.Text = "Ok";
         }
 
         private void btnCreditar_Click(object sender, EventArgs e)
         {
-            
 
+            if (textBox1.Text == string.Empty || lblInscritos.Text == string.Empty || lblRemo.Text == string.Empty)
+            {
+                MessageBox.Show("Favor subir os  arquivos e digitar a quantidade de remos!");
+                return;
+            }
 
             int amountToAdd = int.Parse(textBox1.Text);
 
-           foreach(JToken item in js.Children())
+            foreach (JToken item in js.Children())
             {
-                foreach(JToken it in item.Children())
+                foreach (JToken it in item.Children())
                 {
                     foreach (JToken bets in it.Children())
                     {
-                        foreach(JToken jt in bets.Children())
+                        foreach (JToken jt in bets.Children())
                         {
-                            
+
                             JToken[] jProperties = jt.Children().ToArray();
                             //jProperties[0].Value;
 
-                            if(_subscribers.Contains(jProperties[1].First.ToString()))
+                            if (_subscribers.Contains(jProperties[1].First.ToString()))
                             {
                                 int value = int.Parse(jt["amount"].ToString());
-                                jt["amount"]= value + amountToAdd;
+                                jt["amount"] = value + amountToAdd;
                             }
                         }
                     }
@@ -112,20 +117,32 @@ namespace PDM_RemoNator
 
 
             string path = Path.GetDirectoryName(fileLocation) + "\\";
-            string title = string.Format("Novo Saldo Remos - {0}.json",DateTime.Now.Ticks);
-            using (StreamWriter file = File.CreateText(path+title))
+            string title = string.Format("Novo Saldo Remos - {0}.json", DateTime.Now.Ticks);
+            using (StreamWriter file = File.CreateText(path + title))
             using (JsonTextWriter writer = new JsonTextWriter(file))
             {
                 js.WriteTo(writer);
             }
 
             MessageBox.Show(string.Format("Arquivo salvo em {0}", path + title));
-
+            textBox1.Text = string.Empty;
+            lblInscritos.Text = string.Empty;
+            lblRemo.Text = string.Empty;
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
 
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

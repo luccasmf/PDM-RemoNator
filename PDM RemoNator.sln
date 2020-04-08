@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDM RemoNator", "PDM RemoNator\PDM RemoNator.csproj", "{D32A3B86-1FEA-4A23-B28B-1DF588E42DCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDM_RemoNator", "PDM RemoNator\PDM_RemoNator.csproj", "{D32A3B86-1FEA-4A23-B28B-1DF588E42DCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

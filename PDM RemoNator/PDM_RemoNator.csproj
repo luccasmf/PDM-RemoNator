@@ -5,6 +5,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>PDM_RemoNator</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>Luccas Key.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
