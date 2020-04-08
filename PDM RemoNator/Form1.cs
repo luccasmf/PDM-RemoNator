@@ -122,5 +122,10 @@ namespace PDM_RemoNator
             MessageBox.Show(string.Format("Arquivo salvo em {0}", path + title));
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

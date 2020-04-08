@@ -106,7 +106,7 @@
             this.lblInscritos.ForeColor = System.Drawing.Color.Green;
             this.lblInscritos.Location = new System.Drawing.Point(207, 36);
             this.lblInscritos.Name = "lblInscritos";
-            this.lblInscritos.Size = new System.Drawing.Size(74, 21);
+            this.lblInscritos.Size = new System.Drawing.Size(0, 21);
             this.lblInscritos.TabIndex = 2;
             // 
             // lblRemosToAdd
@@ -134,6 +134,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 6;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // ofSubs
             // 
