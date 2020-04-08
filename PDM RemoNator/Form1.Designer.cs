@@ -30,13 +30,11 @@
         {
             this.ofTodos = new System.Windows.Forms.OpenFileDialog();
             this.btnLoadAll = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.Nick = new System.Windows.Forms.ColumnHeader();
             this.Remos = new System.Windows.Forms.ColumnHeader();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.btnLoadSubs = new System.Windows.Forms.Button();
-            this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.lblRemo = new System.Windows.Forms.Label();
             this.lblInscritos = new System.Windows.Forms.Label();
@@ -61,17 +59,7 @@
             this.btnLoadAll.UseVisualStyleBackColor = true;
             this.btnLoadAll.Click += new System.EventHandler(this.btnLoadAll_Click);
             // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Nick,
-            this.Remos});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(22, 63);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(139, 222);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            
             // 
             // Nick
             // 
@@ -99,18 +87,7 @@
             this.btnLoadSubs.UseVisualStyleBackColor = true;
             this.btnLoadSubs.Click += new System.EventHandler(this.btnLoadSubs_Click);
             // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3});
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(207, 63);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(139, 222);
-            this.listView2.TabIndex = 1;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
-            // 
+                       // 
             // columnHeader3
             // 
             this.columnHeader3.Name = "Nick";
