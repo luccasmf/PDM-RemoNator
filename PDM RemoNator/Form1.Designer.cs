@@ -51,15 +51,13 @@
             // 
             // btnLoadAll
             // 
-            this.btnLoadAll.Location = new System.Drawing.Point(22, 291);
+            this.btnLoadAll.Location = new System.Drawing.Point(22, 75);
             this.btnLoadAll.Name = "btnLoadAll";
             this.btnLoadAll.Size = new System.Drawing.Size(139, 42);
             this.btnLoadAll.TabIndex = 0;
             this.btnLoadAll.Text = "Carregar Extrato de Remos";
             this.btnLoadAll.UseVisualStyleBackColor = true;
             this.btnLoadAll.Click += new System.EventHandler(this.btnLoadAll_Click);
-            // 
-            
             // 
             // Nick
             // 
@@ -79,7 +77,7 @@
             // 
             // btnLoadSubs
             // 
-            this.btnLoadSubs.Location = new System.Drawing.Point(207, 291);
+            this.btnLoadSubs.Location = new System.Drawing.Point(207, 75);
             this.btnLoadSubs.Name = "btnLoadSubs";
             this.btnLoadSubs.Size = new System.Drawing.Size(139, 42);
             this.btnLoadSubs.TabIndex = 0;
@@ -87,7 +85,6 @@
             this.btnLoadSubs.UseVisualStyleBackColor = true;
             this.btnLoadSubs.Click += new System.EventHandler(this.btnLoadSubs_Click);
             // 
-                       // 
             // columnHeader3
             // 
             this.columnHeader3.Name = "Nick";
@@ -95,25 +92,27 @@
             // lblRemo
             // 
             this.lblRemo.AutoSize = true;
-            this.lblRemo.Location = new System.Drawing.Point(22, 34);
+            this.lblRemo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblRemo.ForeColor = System.Drawing.Color.Green;
+            this.lblRemo.Location = new System.Drawing.Point(22, 36);
             this.lblRemo.Name = "lblRemo";
-            this.lblRemo.Size = new System.Drawing.Size(38, 15);
+            this.lblRemo.Size = new System.Drawing.Size(0, 21);
             this.lblRemo.TabIndex = 2;
-            this.lblRemo.Text = "Todos";
             // 
             // lblInscritos
             // 
             this.lblInscritos.AutoSize = true;
-            this.lblInscritos.Location = new System.Drawing.Point(207, 34);
+            this.lblInscritos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblInscritos.ForeColor = System.Drawing.Color.Green;
+            this.lblInscritos.Location = new System.Drawing.Point(207, 36);
             this.lblInscritos.Name = "lblInscritos";
-            this.lblInscritos.Size = new System.Drawing.Size(51, 15);
+            this.lblInscritos.Size = new System.Drawing.Size(74, 21);
             this.lblInscritos.TabIndex = 2;
-            this.lblInscritos.Text = "Inscritos";
             // 
             // lblRemosToAdd
             // 
             this.lblRemosToAdd.AutoSize = true;
-            this.lblRemosToAdd.Location = new System.Drawing.Point(22, 360);
+            this.lblRemosToAdd.Location = new System.Drawing.Point(22, 138);
             this.lblRemosToAdd.Name = "lblRemosToAdd";
             this.lblRemosToAdd.Size = new System.Drawing.Size(104, 15);
             this.lblRemosToAdd.TabIndex = 4;
@@ -121,7 +120,7 @@
             // 
             // btnCreditar
             // 
-            this.btnCreditar.Location = new System.Drawing.Point(119, 399);
+            this.btnCreditar.Location = new System.Drawing.Point(119, 177);
             this.btnCreditar.Name = "btnCreditar";
             this.btnCreditar.Size = new System.Drawing.Size(139, 39);
             this.btnCreditar.TabIndex = 5;
@@ -131,7 +130,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 357);
+            this.textBox1.Location = new System.Drawing.Point(137, 135);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 6;
@@ -144,15 +143,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 450);
+            this.ClientSize = new System.Drawing.Size(371, 234);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnCreditar);
             this.Controls.Add(this.lblRemosToAdd);
             this.Controls.Add(this.lblInscritos);
             this.Controls.Add(this.lblRemo);
-            this.Controls.Add(this.listView2);
             this.Controls.Add(this.btnLoadSubs);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnLoadAll);
             this.Name = "Form1";
             this.Text = "Inscritos";
