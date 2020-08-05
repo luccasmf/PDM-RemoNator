@@ -107,7 +107,7 @@ namespace PDM_RemoNator2
 
                             if (_subscribers.Contains(jProperties[1].First.ToString().ToLower()))
                             {
-                                int value = int.Parse(jt["amount"].ToString());
+                                long value = long.Parse(jt["amount"].ToString());
                                 jt["amount"] = value + amountToAdd;
                             }
                         }
